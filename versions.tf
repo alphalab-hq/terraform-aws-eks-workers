@@ -7,8 +7,8 @@ terraform {
       version = ">= 2.0"
     }
     template = {
-      source  = "hashicorp/template"
-      version = ">= 2.0"
+      source  = "gxben/template"
+      version = "2.2.0-m1"
     }
   }
 }
