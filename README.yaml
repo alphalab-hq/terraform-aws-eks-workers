@@ -11,12 +11,12 @@ name: terraform-aws-eks-workers
 # License of this project
 license: "APACHE2"
 # Canonical GitHub repo
-github_repo: cloudposse/terraform-aws-eks-workers
+github_repo: alphalab-hq/terraform-aws-eks-workers
 # Badges to display
 badges:
   - name: "Latest Release"
-    image: "https://img.shields.io/github/release/cloudposse/terraform-aws-eks-workers.svg"
-    url: "https://github.com/cloudposse/terraform-aws-eks-workers/releases/latest"
+    image: "https://img.shields.io/github/release/zen/terraform-aws-eks-workers.svg"
+    url: "https://github.com/zen/terraform-aws-eks-workers/releases/latest"
   - name: "Slack Community"
     image: "https://slack.cloudposse.com/badge.svg"
     url: "https://slack.cloudposse.com"
@@ -24,32 +24,10 @@ related:
   - name: "terraform-aws-ec2-autoscale-group"
     description: "Terraform module to provision Auto Scaling Group and Launch Template on AWS"
     url: "https://github.com/cloudposse/terraform-aws-ec2-autoscale-group"
-  - name: "terraform-aws-ecs-container-definition"
-    description: "Terraform module to generate well-formed JSON documents (container definitions) that are passed to the  aws_ecs_task_definition Terraform resource"
-    url: "https://github.com/cloudposse/terraform-aws-ecs-container-definition"
-  - name: "terraform-aws-ecs-alb-service-task"
-    description: "Terraform module which implements an ECS service which exposes a web service via ALB"
-    url: "https://github.com/cloudposse/terraform-aws-ecs-alb-service-task"
-  - name: "terraform-aws-ecs-web-app"
-    description: "Terraform module that implements a web app on ECS and supports autoscaling, CI/CD, monitoring, ALB integration, and much more"
-    url: "https://github.com/cloudposse/terraform-aws-ecs-web-app"
-  - name: "terraform-aws-ecs-codepipeline"
-    description: "Terraform module for CI/CD with AWS Code Pipeline and Code Build for ECS"
-    url: "https://github.com/cloudposse/terraform-aws-ecs-codepipeline"
-  - name: "terraform-aws-ecs-cloudwatch-autoscaling"
-    description: "Terraform module to autoscale ECS Service based on CloudWatch metrics"
-    url: "https://github.com/cloudposse/terraform-aws-ecs-cloudwatch-autoscaling"
-  - name: "terraform-aws-ecs-cloudwatch-sns-alarms"
-    description: "Terraform module to create CloudWatch Alarms on ECS Service level metrics"
-    url: "https://github.com/cloudposse/terraform-aws-ecs-cloudwatch-sns-alarms"
-  - name: "terraform-aws-ec2-instance"
-    description: "Terraform module for providing a general purpose EC2 instance"
-    url: "https://github.com/cloudposse/terraform-aws-ec2-instance"
-  - name: "terraform-aws-ec2-instance-group"
-    description: "Terraform module for provisioning multiple general purpose EC2 hosts for stateful applications"
-    url: "https://github.com/cloudposse/terraform-aws-ec2-instance-group"
 # Short description of this project
 description: |-
+  Forked from https://github.com/cloudposse/terraform-aws-eks-workers to fix the issue with template provider not available on M1 Mac machines.
+
   Terraform module to provision AWS resources to run EC2 worker nodes for [Elastic Container Service for Kubernetes](https://aws.amazon.com/eks/).
 
   Instantiate it multiple times to create many EKS worker node pools with specific settings such as GPUs, EC2 instance types, or autoscale parameters.
@@ -102,7 +80,7 @@ usage: |2-
     }
 
     module "eks_workers" {
-      source = "cloudposse/eks-workers/aws"
+      source = "alphalab-hq/eks-workers/aws"
       # Cloud Posse recommends pinning every module to a specific version
       # version     = "x.x.x"
       namespace                          = var.namespace
@@ -159,3 +137,5 @@ contributors:
     github: "goruha"
   - name: Vladimir Syromyatnikov
     github: SweetOps
+  - name: Tomasz 'Zen' Napierala
+    github: zen
