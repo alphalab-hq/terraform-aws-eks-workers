@@ -82,6 +82,11 @@ variable "metadata_http_tokens_required" {
   description = "Set true to require IMDS session tokens, disabling Instance Metadata Service Version 1."
 }
 
+variable "metadata_instance_metadata_tags_enabled" {
+  type        = bool
+  default     = true
+  description = "Set true to enable metadata tags in the launch template."
+}
 variable "instance_initiated_shutdown_behavior" {
   type        = string
   description = "Shutdown behavior for the instances. Can be `stop` or `terminate`"
