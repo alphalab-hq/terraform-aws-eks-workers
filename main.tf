@@ -119,8 +119,7 @@ data "aws_iam_instance_profile" "default" {
 }
 
 module "autoscale_group" {
-  source  = "cloudposse/ec2-autoscale-group/aws"
-  version = "0.30.1"
+  source  = "github.com/alphalab-hq/terraform-aws-ec2-autoscale-group"
 
   enabled = local.enabled
   tags    = merge(local.tags, var.autoscaling_group_tags)
