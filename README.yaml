@@ -12,18 +12,7 @@ name: terraform-aws-eks-workers
 license: "APACHE2"
 # Canonical GitHub repo
 github_repo: alphalab-hq/terraform-aws-eks-workers
-# Badges to display
-badges:
-  - name: "Latest Release"
-    image: "https://img.shields.io/github/release/zen/terraform-aws-eks-workers.svg"
-    url: "https://github.com/zen/terraform-aws-eks-workers/releases/latest"
-  - name: "Slack Community"
-    image: "https://slack.cloudposse.com/badge.svg"
-    url: "https://slack.cloudposse.com"
-related:
-  - name: "terraform-aws-ec2-autoscale-group"
-    description: "Terraform module to provision Auto Scaling Group and Launch Template on AWS"
-    url: "https://github.com/cloudposse/terraform-aws-ec2-autoscale-group"
+
 # Short description of this project
 description: |-
   Forked from https://github.com/cloudposse/terraform-aws-eks-workers to fix the issue with template provider not available on M1 Mac machines.
