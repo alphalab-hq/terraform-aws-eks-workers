@@ -84,7 +84,7 @@ variable "metadata_http_tokens_required" {
 
 variable "metadata_instance_metadata_tags_enabled" {
   type        = bool
-  default     = true
+  default     = false
   description = "Set true to enable metadata tags in the launch template."
 }
 variable "instance_initiated_shutdown_behavior" {
