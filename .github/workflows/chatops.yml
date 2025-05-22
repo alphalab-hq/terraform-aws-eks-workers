@@ -5,7 +5,7 @@ on:
 
 jobs:
   default:
-    runs-on: ubuntu-latest
+    runs-on: cldn-ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: "Handle common commands"
@@ -19,7 +19,7 @@ jobs:
           issue-type: pull-request
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: cldn-ubuntu-latest
     steps:
       - name: "Checkout commit"
         uses: actions/checkout@v2
